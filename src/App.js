@@ -1,23 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
-
+import {Counter,Counter2} from './Compoments/Counter';
+import Todolist from './Compoments/Todolist';
+//----------------------------------------------------------------
+import { useState } from 'react';
 function App() {
+  const [appData,setAppdata] = useState('data parent');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    <div className="AppName">
+      <Todolist />
+      {/* khi todolist chayj se gom nhom lai kieu
+      
+        {
+          parentTochild:'data parent',
+        }
+      */}
+
+    {/* <Counter/> */}
+    {/* <Counter2/> */}
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          className="App-links"
+          href="https://vuejs.org"
           target="_blank"
           rel="noopener noreferrer"
+
         >
-          Learn React
+          {/* Phạm Quốc Thành */}
         </a>
-      </header>
     </div>
   );
 }
